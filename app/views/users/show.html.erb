@@ -1,0 +1,15 @@
+<h1>Welcome <%= @user.name %></h1>
+
+<% if @user.admin? %>
+  <p>ADMIN</p>
+<% end %>
+
+<h4>Nausea: <%= @user.nausea %></h4>
+<h4>Happiness: <%= @user.happiness %></h4>
+<h4>Mood: <%= @user.mood %></h4>
+<h4>Tickets: <%= @user.tickets %></h4>
+<h4>Height: <%= @user.height %></h4>
+
+<%= link_to "See attractions", attractions_path %>
+<br><br>
+<%= link_to 'Edit User', edit_user_path %>
